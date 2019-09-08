@@ -3,10 +3,16 @@
 
 #include "pch.h"
 #include <iostream>
-
+#include "MyLoop.h"
+#include "Scene.h"
+using namespace MySmallRadioApp;
 int main()
+
 {
-    std::cout << "Hello World!\n"; 
+	MyLoop* loop = new MyLoop();
+	loop->Loop();
+	std::cout << "Hello World!\n";
+	
 }
 
 // Per eseguire il programma: CTRL+F5 oppure Debug > Avvia senza eseguire debug

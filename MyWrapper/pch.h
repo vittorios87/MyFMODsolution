@@ -11,4 +11,14 @@
 
 // TODO: aggiungere qui le intestazioni da precompilare
 
+
+
+#include <MyWrapperLib.h>
+#include <conio.h>
+#include <Windows.h>
+#include <stdio.h>
+#include <initializer_list>
+#include <map>
+#include <string>
+#include <iostream>
 #endif //PCH_H
