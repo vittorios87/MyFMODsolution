@@ -36,7 +36,7 @@ namespace MySmallRadioApp
 		SetCursorTo(0, 0);
 		WriteConsole(bufferHandle, buffer.c_str(), buffer.size(), &Written, NULL);
 
-		if (hideCursor)
+		if (!hideCursor)
 		{
 			HideCursor();
 		}

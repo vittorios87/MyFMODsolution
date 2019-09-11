@@ -189,7 +189,18 @@ namespace FmodStaticLib
 	std::wstring& MyWrapperLib::DisplayChannelsState()
 	{
 		outputString.clear();
-		outputString.append(L"  CHANNELS IN USE\n\n");
+		outputString.append(L"                      CHANNELS IN USE\n\n");
+		outputString.append(L"CHANNEL"); 
+		outputString.append(L"\t\t");
+		outputString.append(L"PLAY/STOP");
+		outputString.append(L"\t");
+		outputString.append(L"TIME");
+		outputString.append(L"\t\t\t");
+		outputString.append(L"VOLUME");
+		outputString.append(L"\t\t\t");
+		outputString.append(L"PAN");
+		outputString.append(L"\n\n");
+
 		for (auto it = myChannels.begin(), itEnd = myChannels.end(); it != itEnd; ++it)
 		{
 			bChannelIsPlaying = false;
@@ -200,7 +211,7 @@ namespace FmodStaticLib
 			it->second->getVolume(&channelVolume);
 			channelVolume = volume_to_dB(channelVolume);
 			outputString.append(L"channel " + std::to_wstring(it->first) 
-				+ L":\t\t"+ std::to_wstring(bChannelIsPlaying) 
+				+ L"\t"+ std::to_wstring(bChannelIsPlaying) 
 				+ L"\t\t" + std::to_wstring(chanPositionInSec) 
 				+ L"\t\t" + std::to_wstring(channelVolume) 
 				+ L"\t\t" + std::to_wstring(channelPanLevels->at(it->first)) + L"\n");

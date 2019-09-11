@@ -24,12 +24,17 @@ namespace MySmallRadioApp
 		unsigned char selectedOpt;
 
 		std::string filePathStr= std::string();
+		std::string selectedChStr = std::string();
 		std::wstring soundPath;
+		void SelectChannel();
+		void InputFileName();
 
 		bool inputHasbeenUpdated = true;
 		bool sceneHasBeenUpdated = false;
 
-		std::map<unsigned int, std::wstring> menuOptions;
+		//std::map<unsigned int, std::wstring> menuOptions;
+		std::wstring* menuOptions;
+
 		bool inputStringEnabled = false;
 		unsigned int currentSelection = 0;
 
@@ -37,7 +42,7 @@ namespace MySmallRadioApp
 		void PrintMainMenu();
 
 		void TakeInput(unsigned int);
-		void TakeInputString(const std::string&);
+		void TakeInputString();
 
 		bool GetInputMode();
 		void SetInputMode(bool, unsigned int selection = 0);
@@ -48,6 +53,7 @@ namespace MySmallRadioApp
 
 		void SetLoadSoundOptions();
 		void ChangeSoundOptions(const std::string&);
+
 		
 
 		bool changeSoundOpts;
