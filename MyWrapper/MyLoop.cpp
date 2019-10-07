@@ -150,15 +150,22 @@ namespace MySmallRadioApp
 
 	void MyLoop::Update()
 	{
+		//PrintMainMenu();
+
+		
 		if (inputHasbeenUpdated)
 		{
 			PrintMainMenu();
 			sceneHasBeenUpdated = true;
 			inputHasbeenUpdated = false;
 		}
+		
 	}
 	void MyLoop::Render()
 	{
+		//BufferInstance->writeBuffer(menuScreen);
+		//BufferInstance->printBuffer(GetInputMode());
+		
 		if (sceneHasBeenUpdated)
 		{
 
@@ -166,6 +173,7 @@ namespace MySmallRadioApp
 			BufferInstance->printBuffer(GetInputMode());
 			sceneHasBeenUpdated = false;
 		}
+		
 	}
 
 	void MyLoop::PrintMainMenu() {
